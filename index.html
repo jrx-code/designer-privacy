@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>JI Designer - privacy policy</title>
+<style>
+  :root { color-scheme: light dark; --ink: #11151a; --bg: #f7f8fa; --accent: #1557c0; }
+  @media (prefers-color-scheme: dark) { :root { --ink: #e6edf3; --bg: #0e1116; --accent: #5fb3f0; } }
+  body { margin: 0 auto; max-width: 42rem; padding: 2rem 1rem 4rem; background: var(--bg);
+         color: var(--ink); font: 16px/1.6 system-ui, sans-serif; }
+  h1 { font-size: 1.6rem; border-left: 3px solid var(--accent); padding-left: .6rem; }
+  h2 { font-size: 1.15rem; margin-top: 2rem; }
+  code { font-family: ui-monospace, monospace; }
+  .date { opacity: .7; font-size: .9rem; }
+</style>
+</head>
+<body>
+<h1>JI Designer - privacy policy</h1>
+<p class="date">Applies to the Android application <code>eu.iwanus.designer</code>. Last updated 9 November 2026.</p>
+
+<h2>Short version</h2>
+<p>There is no account, no sign-up, no analytics and no advertising. The application has no server of
+its own and collects nothing. Everything it keeps stays on the device, and the only data that leaves
+the device is what you send, to the service you chose, when you ask for a render.</p>
+
+<h2>What is stored on the device</h2>
+<ul>
+  <li>Your settings: the mode, the room and style you last used, and the palette strength.</li>
+  <li>In standalone mode, the API key you entered, encrypted with the Android keystore.</li>
+  <li>In home mode, the address of your own server and a device token for it, encrypted the same way.</li>
+</ul>
+<p>Nothing in this list is backed up to a cloud: the application sets
+<code>android:allowBackup="false"</code>. Uninstalling removes all of it.</p>
+
+<h2>What leaves the device, and where it goes</h2>
+<p><strong>Standalone mode.</strong> The photo you choose is read on the device and never uploaded. The
+text prompt built from its palette is sent to the image service you configured, with your own API key,
+and the picture that service returns comes back. That service is your contractual counterparty, not
+ours, and its own privacy policy applies to that request.</p>
+<p><strong>Home mode.</strong> The photo, the prompt and the result travel between the application and
+the JI Designer server you paired with, which is a machine on your own network. Where that server is
+configured to render on a hosted engine, the prompt reaches that engine under the key stored on the
+server.</p>
+
+<h2>What the developer receives</h2>
+<p>Nothing. The developer operates no service for this application, receives no telemetry, no crash
+reports and no copies of your photos, prompts or results.</p>
+
+<h2>Permissions</h2>
+<ul>
+  <li><strong>Internet</strong>, to reach the image service or your own server.</li>
+  <li>No storage permission. Photos are chosen through the Android photo picker, which hands the
+      application a one-time read of the single file you picked and nothing else.</li>
+</ul>
+
+<h2>Children</h2>
+<p>The application is not directed at children and collects no personal data from anyone.</p>
+
+<h2>Changes and contact</h2>
+<p>A change to this policy is published at this address before the version it applies to is released.
+Questions: <a href="mailto:engineering@iwanus.eu">engineering@iwanus.eu</a>.</p>
+</body>
+</html>
